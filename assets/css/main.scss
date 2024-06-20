@@ -8,3 +8,4 @@ search: false
 $direction: {{ site.direction | default: 'ltr' }};
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+{% if site.direction == "rtl" %}@import "rtl";{% endif %} // add right to left support
