@@ -23,9 +23,9 @@
     {% comment %} First page {% endcomment %}
     {% unless has_first_page %}
       {% if paginator.page == 1 %}
-        <li><a href="#" class="disabled current">1</a></li>
+        <li><a href="#" class="disabled current">{{ "1" | habify }}</a></li>
       {% else %}
-        <li><a href="{{ paginator.first_page_path | relative_url }}">1</a></li>
+        <li><a href="{{ paginator.first_page_path | relative_url }}">{{ "1" | habify }}</a></li>
       {% endif %}
     {% endunless %}
 
@@ -38,9 +38,9 @@
     {% comment %} Main pagination trail {% endcomment %}
     {% for trail in paginator.page_trail %}
       {% if paginator.page == trail.num %}
-        <li><a href="{{ trail.path | remove: 'index.html' | relative_url }}" class="disabled current">{{ trail.num }}</a></li>
+        <li><a href="{{ trail.path | remove: 'index.html' | relative_url }}" class="disabled current">{{ trail.num | habify }}</a></li>
       {% else %}
-        <li><a href="{{ trail.path | remove: 'index.html' | relative_url }}">{{ trail.num }}</a></li>
+        <li><a href="{{ trail.path | remove: 'index.html' | relative_url }}">{{ trail.num | habify }}</a></li>
       {% endif %}
     {% endfor %}
 
@@ -52,9 +52,9 @@
 
     {% unless has_last_page %}
       {% if paginator.page == paginator.total_pages %}
-        <li><a href="#" class="disabled current">{{ paginator.page }}</a></li>
+        <li><a href="#" class="disabled current">{{ paginator.page | habify }}</a></li>
       {% else %}
-        <li><a href="{{ paginator.last_page_path | remove: 'index.html' | relative_url }}">{{ paginator.total_pages }}</a></li>
+        <li><a href="{{ paginator.last_page_path | remove: 'index.html' | relative_url }}">{{ paginator.total_pages | habify }}</a></li>
       {% endif %}
     {% endunless %}
 
