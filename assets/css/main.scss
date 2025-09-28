@@ -5,5 +5,7 @@ search: false
 
 @charset "utf-8";
 
+$direction: {% if site.rtl %}"rtl"{% else %}"ltr"{% endif %};
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+{% if site.direction == "rtl" %}@import "rtl";{% endif %} // add right to left support
