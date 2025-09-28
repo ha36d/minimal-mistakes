@@ -1400,7 +1400,7 @@ fa: &DEFAULT_FA
   toc_label                  : "در این صفحه"
   ext_link_label             : "لینک مستقیم"
   less_than                  : " "
-  minute_read                : "دقیقه، طول مطالعه"
+  minute_read                : "دقیقه"
   share_on_label             : "اشتراک گذاری در"
   meta_label                 :
   tags_label                 : "تگ ها: "

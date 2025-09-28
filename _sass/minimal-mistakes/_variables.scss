@@ -65,9 +65,13 @@ $sans-serif: $default-sans-serif !default;
 $sans-serif-narrow: $sans-serif !default;
 $monospace: $default-monospace !default;
 
-$global-font-family: $sans-serif !default;
-$header-font-family: $sans-serif !default;
-$caption-font-family: $serif !default;
+/* persian typefaces */
+$vazirmatn: "Vazirmatn", sans-serif !default;
+
+$global-font-family: $vazirmatn !default;
+$header-font-family: $vazirmatn !default;
+$caption-font-family: $vazirmatn !default;
+$extra-font-family: $vazirmatn !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
